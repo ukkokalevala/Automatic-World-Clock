@@ -12,17 +12,17 @@ Automatic Cycling — Every 10 seconds, the clock advances to the next capital i
 Live Display — The screen continuously refreshes, showing the city, country, time, date, and day of the week.
 
 Features
-🌍 13 World Capitals — Cape Town, London, Paris, Berlin, Moscow, Dubai, Mumbai, Beijing, Tokyo, Sydney, New York, Los Angeles, and Rio de Janeiro.
+13 World Capitals — Cape Town, London, Paris, Berlin, Moscow, Dubai, Mumbai, Beijing, Tokyo, Sydney, New York, Los Angeles, and Rio de Janeiro.
 
-🕐 Accurate NTP Time Sync — Each city uses its correct GMT offset (including half-hour zones like Mumbai, GMT+5:30).
+Accurate NTP Time Sync — Each city uses its correct GMT offset (including half-hour zones like Mumbai, GMT+5:30).
 
-🔄 Auto-Flip Every 10 Seconds — Hands-free rotation through all capitals.
+Auto-Flip Every 10 Seconds — Hands-free rotation through all capitals.
 
-📺 Two-Zone OLED Layout — City/country in the top zone, time/date/day in the bottom zone.
+Two-Zone OLED Layout — City/country in the top zone, time/date/day in the bottom zone.
 
-📐 Smart Text Centering — Measures actual pixel width and clamps to the screen edge so long city names never get clipped.
+Smart Text Centering — Measures actual pixel width and clamps to the screen edge so long city names never get clipped.
 
-📶 Wi-Fi Status Feedback — Serial output and on-screen prompts during connection and sync.
+Wi-Fi Status Feedback — Serial output and on-screen prompts during connection and sync.
 
 Hardware Requirements
 Component	Details
@@ -44,9 +44,8 @@ time.h — NTP time functions
 Configuration
 Before uploading, edit these two lines in the source:
 
-cpp
-const char* WIFI_SSID     = "Antonelli";       // Your Wi-Fi name
-const char* WIFI_PASSWORD = "maomao1206";      // Your Wi-Fi password
+const char* WIFI_SSID     = "YOUR_SSID";       // Your Wi-Fi name
+const char* WIFI_PASSWORD = "YOUR_PASSWORD";      // Your Wi-Fi password
 To add or remove cities, simply edit the CAPITALS[] array — each entry takes a name, country, and GMT offset in seconds.
 
 Display Layout
