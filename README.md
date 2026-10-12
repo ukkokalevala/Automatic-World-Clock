@@ -80,4 +80,36 @@ Add a buzzer for hourly chimes
 Summary
 A compact, self-contained IoT clock that turns a small OLED into a window to the world — no manual time-setting, no buttons, just accurate local times from 13 major cities, rotating automatically every 10 seconds.
 
+# 🌍 Automatic World Clock (ESP32 + OLED)
 
+An ESP32-based desk clock that cycles through 13 world capitals every
+10 seconds, displaying the accurate local time and date for each city
+on a 128×64 OLED — fully automatic, no buttons required.
+
+## Features
+- 13 world capitals with correct GMT offsets (incl. half-hour zones)
+- Wi-Fi + NTP time sync via `pool.ntp.org`
+- Auto-flip every 10 seconds
+- Two-zone OLED layout: city/country on top, time/date/day below
+- Smart text centering that prevents clipping on long city names
+
+## Hardware
+| Component | Notes |
+|-----------|-------|
+| ESP32 dev board | Any variant |
+| SSD1306 OLED | 128×64, I2C |
+| Wiring | **SCL → GPIO7**, **SDA → GPIO6** |
+
+## Dependencies
+- Adafruit GFX
+- Adafruit SSD1306
+- WiFi (built-in)
+- time.h (built-in)
+
+## Setup
+1. Clone this repo.
+2. Open the sketch in the Arduino IDE.
+3. Edit your credentials:
+   ```cpp
+   const char* WIFI_SSID     = "YOUR_WIFI";
+   const char* WIFI_PASSWORD = "YOUR_PASSWORD";
